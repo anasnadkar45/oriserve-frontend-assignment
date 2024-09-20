@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { CopyIcon, GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
 interface PackageDetails {
     name: string;
@@ -98,7 +99,7 @@ const PackageDetail = () => {
 
 
     return (
-        <div className="p-4">
+        <div>
             <Card className='min-h-[70vh]'>
                 <CardHeader>
                     <div className="flex items-center justify-between">
@@ -113,10 +114,13 @@ const PackageDetail = () => {
                     <p className="mb-4">{packageDetails.description}</p>
                     <Tabs defaultValue="install">
                         <TabsList>
-                            <TabsTrigger value="install">Install</TabsTrigger>
-                            <TabsTrigger value="repository">Repository</TabsTrigger>
-                            <TabsTrigger value="homepage">Homepage</TabsTrigger>
-                            <TabsTrigger value="versions">Versions</TabsTrigger>
+                            <ScrollArea className="w-[240px] md:w-[340px] whitespace-nowrap rounded-md border">
+                                <TabsTrigger value="install">Install</TabsTrigger>
+                                <TabsTrigger value="repository">Repository</TabsTrigger>
+                                <TabsTrigger value="homepage">Homepage</TabsTrigger>
+                                <TabsTrigger value="versions">Versions</TabsTrigger>
+                                <ScrollBar orientation="horizontal" />
+                            </ScrollArea>
                         </TabsList>
                         <TabsContent value="install" className="mt-4">
                             <div className="flex items-center space-x-2">

@@ -13,10 +13,6 @@ export default function HomePage() {
     const [total, setTotal] = useState(0);
     const navigate = useNavigate();
 
-    const categoryHandler = (name: string) => {
-        setCategory(name);
-    };
-
     const fetchPackageByCategory = async () => {
         try {
             const response = await fetch(
@@ -38,6 +34,10 @@ export default function HomePage() {
     useEffect(() => {
         if (category) {
             fetchPackageByCategory();
+        }else{
+            setPackages([]);
+        setTotal(0);
+        setIsCategory(false);
         }
     }, [category]);
 

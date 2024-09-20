@@ -14,7 +14,7 @@ const SearchBar = () => {
         <div className='border-b'>
             <div className="max-w-full px-4 md:px-8 mx-auto py-2 shadow-lg">
                 <div className='flex gap-6 items-center'>
-                    <FaNpm size={60} onClick={()=>navigate('/')} className='cursor-pointer'/>
+                    <FaNpm  size={60} onClick={()=>navigate('/')} className='hidden sm:flex cursor-pointer'/>
                     <div className="relative w-[100%]">
                         <div>
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -42,7 +42,7 @@ const SearchBar = () => {
                             }
                         </div>
                     </div>
-                    <FaCircleUser size={60} className='text-green-500' />
+                    <FaCircleUser size={60} className='hidden sm:flex text-green-500' />
                 </div>
 
             </div>
