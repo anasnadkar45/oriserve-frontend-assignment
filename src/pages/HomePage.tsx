@@ -6,6 +6,14 @@ import PopularLibrary from "@/components/homepage/PopularLibrary";
 import Downloads from "@/components/homepage/Downloads";
 import PackageCard from "@/components/homepage/PackageCard";
 
+
+interface PackageData {
+    package: {
+        name: string;
+        description: string;
+        version: string;
+    };
+}
 export default function HomePage() {
     const [category, setCategory] = useState<string>("");
     const [isCategory, setIsCategory] = useState(false);
@@ -58,7 +66,7 @@ export default function HomePage() {
                         <Button onClick={() => setCategory("")}>Back</Button>
                     </div>
                     <div className="space-y-2 mt-6">
-                        {packages.slice(0, 10).map((pack) => (
+                        {packages.slice(0, 10).map((pack:PackageData) => (
                             <PackageCard key={pack.package.name} pack={pack} navigate={navigate} />
                         ))}
                     </div>

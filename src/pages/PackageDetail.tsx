@@ -75,7 +75,7 @@ const PackageDetail = () => {
         return <div>No package details available.</div>;
     }
 
-    const allVersions = Object.entries(packageDetails.versions).map(([version, data]) => ({
+    const allVersions = Object.entries(packageDetails.versions).map(([version]) => ({
         version,
         date: packageDetails.time[version],
     })).reverse();
@@ -88,8 +88,7 @@ const PackageDetail = () => {
     const indexOfFirstVersion = indexOfLastVersion - versionsPerPage;
     const currentVersions = allVersions.slice(indexOfFirstVersion, indexOfLastVersion);
 
-    // Handle page changes
-    const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
     const nextPage = () => {
         if (currentPage < totalPages) setCurrentPage(currentPage + 1);
     };
