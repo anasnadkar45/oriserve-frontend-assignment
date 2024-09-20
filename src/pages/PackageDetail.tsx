@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -74,7 +74,6 @@ const PackageDetail = () => {
         return <div>No package details available.</div>;
     }
 
-    // Prepare versions data for pagination
     const allVersions = Object.entries(packageDetails.versions).map(([version, data]) => ({
         version,
         date: packageDetails.time[version],
