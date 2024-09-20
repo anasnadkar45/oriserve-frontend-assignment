@@ -5,7 +5,6 @@ export function useFetchPackages() {
     const [input, setInput] = useState('');
     const [debounceSearch, setDebounceSearch] = useState(input);
     const [loadings, setLoadings] = useState(false);
-    const cache = {};
 
     const fetchData = async () => {
         try {
