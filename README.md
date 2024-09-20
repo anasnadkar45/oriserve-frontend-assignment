@@ -14,8 +14,8 @@ Node.js and npm installed on your machine.
 Clone: Open your terminal or command prompt and run
 
   ```bash
-   git clone https://github.com/anasnadkar45/speedy-brand-frontend-assignment.git
-   cd speedy-brand-frontend-assignment
+   git clone https://github.com/anasnadkar45/oriserve-frontend-assignment.git
+   cd oriserve-frontend-assignment
 ```
 
 Download: Alternatively, you can download the repository as a ZIP file from GitHub and extract it to your local machine.
@@ -44,6 +44,11 @@ npm run dev
 ```
 This will usually start the development server and open the application in your default web browser.
 
+# Features
+- Search NPM Packages: Users can search for NPM packages by keywords using the NPMS API.
+- Category-based Search: Displays packages based on selected categories.
+- Responsive Design: The UI is responsive, making it accessible on different screen sizes.
+- Popular Libraries & Downloads Section: Predefined sections that showcase popular libraries and package downloads.
 
 Alternatively, Users can see a live version of this project without having to set it up locally by using the below link
 
