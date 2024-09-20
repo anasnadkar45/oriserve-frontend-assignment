@@ -50,6 +50,14 @@ This will usually start the development server and open the application in your 
 - Responsive Design: The UI is responsive, making it accessible on different screen sizes.
 - Popular Libraries & Downloads Section: Predefined sections that showcase popular libraries and package downloads.
 
+# Technologies Used
+- React.js
+- TypeScript
+- Tailwind CSS
+- React Router
+- NPMS API
+- React Icons
+
 Alternatively, Users can see a live version of this project without having to set it up locally by using the below link
 
-[Live Demo](https://speedy-brand-frontend-assignment.vercel.app/)
+[Live Demo](https://oriserve-frontend-assignment.vercel.app/)
